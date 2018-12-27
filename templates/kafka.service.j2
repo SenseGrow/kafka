@@ -7,7 +7,7 @@ After=network.target remote-fs.target kafka-zookeeper.service
 [Service]
 Type=simples
 User={{ sansible_kafka_user }}
-Group={{ ansible_kafka_group }}
+Group={{ sansible_kafka_group }}
 EnvironmentFile=/home/{{ sansible_kafka_user }}/etc/environment 
 LimitNOFILE={{ sansible_kafka_max_open_files }}
 ExecStart=/home/{{ sansible_kafka_user }}/kafka/bin/kafka-server-start.sh /home/{{ sansible_kafka_user }}/kafka/config/server.properties
