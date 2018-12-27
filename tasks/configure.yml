@@ -99,6 +99,10 @@
   notify:
     - restart kafka
 
+- name: Enable  Kafka service
+  become: yes
+  command: systemctl enable kafka.service
+
 - name: Ensure Kafka is running
   become: yes
   service:
