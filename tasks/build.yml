@@ -54,10 +54,10 @@
 - name: Create Kafka service
   become: yes
   template:
-    dest: /etc/init.d/kafka
+    dest: /etc/systemd/system/kafka.service
     owner: root
     mode: 0755
-    src: kafka_sysv.j2
+    src: kafka.service.j2
 
 - name: Create kafka startup links
   become: yes

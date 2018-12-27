@@ -1,7 +1,7 @@
 NAME=kafka
 
-USER=$NAME
-GROUP=$NAME
+USER={{ sansible_kafka_user }}
+GROUP={{ ansible_kafka_group }}
 
 KAFKA_HEAP_OPTS="{{ sansible_kafka_heap_opts }}"
 JMX_PORT="{{ sansible_kafka_jmx_port }}"
